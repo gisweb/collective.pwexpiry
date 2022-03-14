@@ -1,15 +1,8 @@
 # -*- coding: utf-8 -*-
 from collective.pwexpiry.config import _
-from plone.app.users.userdataschema import IUserDataSchema
-from plone.app.users.userdataschema import IUserDataSchemaProvider
+from plone.app.users.schema import IUserDataSchema
 from zope import schema
 from zope.interface import implementer
-
-
-@implementer(IUserDataSchemaProvider)
-class UserDataSchemaProvider(object):
-    def getSchema(self):
-        return IEnhancedUserDataSchema
 
 
 class IEnhancedUserDataSchema(IUserDataSchema):

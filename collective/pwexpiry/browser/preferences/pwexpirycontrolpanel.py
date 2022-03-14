@@ -169,7 +169,7 @@ class PwExpiryControlPanel(UsersGroupsControlPanelView):
 
         if isinstance(date, DateTime):
             # XXX: Do it like this to avoid issues with timezones
-            str_date = f"{date.year()}/{date.month()}/{date.day()}"
+            str_date = "%s/%s/%s" %(date.year(),date.month(),date.day())
             if str_date == "2000/01/01":
                 result = _(u"Never")
             else:

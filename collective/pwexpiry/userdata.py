@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from plone.app.users.browser.personalpreferences import UserDataPanelAdapter
+from plone.app.users.browser.account import AccountPanelSchemaAdapter
 
 
-class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
+class EnhancedUserDataPanelAdapter(AccountPanelSchemaAdapter):
     @property
     def password_date(self):
         return self.context.getProperty("password_date", "")
